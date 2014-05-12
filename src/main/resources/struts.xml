@@ -19,5 +19,9 @@
             class="com.bytenoodles.bnfilms.struts.action.LoginAction">
             <result name="success">login.jsp</result>
         </action>
+        <action name="locale" 
+            class="com.bytenoodles.bnfilms.struts.action.LocaleAction">
+            <result name="success" type="redirectAction">login</result>
+        </action>
     </package>
 </struts>

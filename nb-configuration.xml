@@ -6,6 +6,31 @@ The configuration is intended to be shared among all the users of project and
 therefore it is assumed to be part of version control checkout.
 Without this configuration present, some functionality in the IDE may be limited or fail altogether.
 -->
+    <config-data xmlns="http://www.netbeans.org/ns/maven-config-data/1">
+        <configurations>
+            <configuration id="development" profiles="">
+                <property name="glassfish.user">admin</property>
+                <property name="glassfish.pwdfile">pwdfile_development</property>
+                <property name="glassfish.host">localhost</property>
+                <property name="glassfish.domain">development</property>
+                <property name="glassfish.adminport">8081</property>
+            </configuration>
+            <configuration id="testing" profiles="">
+                <property name="glassfish.user">admin</property>
+                <property name="glassfish.pwdfile">pwdfile_development</property>
+                <property name="glassfish.host">localhost</property>
+                <property name="glassfish.domain">testing</property>
+                <property name="glassfish.adminport">7071</property>
+            </configuration>
+            <configuration id="production" profiles="">
+                <property name="glassfish.user">admin</property>
+                <property name="glassfish.pwdfile">pwdfile_development</property>
+                <property name="glassfish.host">localhost</property>
+                <property name="glassfish.domain">production</property>
+                <property name="glassfish.adminport">6061</property>
+            </configuration>
+        </configurations>
+    </config-data>
     <properties xmlns="http://www.netbeans.org/ns/maven-properties-data/1">
         <!--
 Properties that influence various parts of the IDE, especially code formatting and the like. 
